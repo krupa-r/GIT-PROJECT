@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <title>Document</title>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9uPjGUr755jxmdBwi9wlgnlhZBfswsdE&libraries=places"></script>
+</head>
+<body>
+    <nav class="navbar" id="navMenu">
+        <div class="container">
+  
+          <div class="navbar-title">
+            <a class="navbar-brand" href="index.html">not loli</a>
+            
+            <button class="navbar-toggler" type="button" onclick="toggleActive()">
+              <span class="navbar-icon" id="open-nav"><i class="uil uil-bars"></i></span>
+              <span class="navbar-icon" id="close-nav"><i class="uil uil-multiply"></i></span>
+            </button>
+          </div>
+  
+          <div class="nav-links" id="navbarNav">
+            <div class="navbar-nav nav-primary">
+              <a class="nav-link active-link" href="#">Ride</a>
+              <a class="nav-link" href="#">Drive</a>
+              <a class="nav-link" href="./team.html">Emergency SOS</a>
+              <!-- <a class="nav-link" href="./founders.html">Founders</a> -->
+            </div>
+            <div class="navbar-nav nav-secondary">
+              <a class="nav-link" target="_blank" href="mailto:zeal.organisation@gmail.com"><i class="uil uil-envelope"></i></a>
+              <a class="nav-link" target="_blank" href="https://www.instagram.com/zeal.organisation/"><i class="uil uil-instagram-alt"></i></a>
+              <a class="nav-link" target="_blank" href="https://www.linkedin.com/company/zeal-org/"><i class="uil uil-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <section class="hero-section">
+				
+        <div class="hero-img-container">
+            <img src="./../images/Saly-1.png" alt="">
+        </div>
+        
+        <div class="hero-text-container">
+            <div class="hero-text">
+                FOR WOMEN. <br><span>BY WOMEN.</span>
+            </div>
+            <form class="travel-fields" action="users/findride" method="POST">
+            <div class = "from-field">
+            <input type="text" class="travel-input" placeholder="From" name="from" id="from-location">
+            <i class="uil uil-map-marker" title="Get Current Location"></i>
+            </div>
+              <input type="text" id="to-location" class="travel-input" name="to" placeholder="To"><br>
+            <input type="datetime-local" id="ride-date-time" name="date" class="travel-input" placeholder="Ride Date and Time">
+            <button type="submit" class="travel-btn">Find Ride</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="info-section">
+        <div class="info-piece">
+            <div class="info-text">
+                <p>Find a ride whenever you want to within minutes</p>
+                <div class="discover-btn">
+                    Learn more
+                </div>
+            </div>
+            <div class="info-img-container">
+                <img src="./../images/Saly-2.png" alt="" class="info-img">
+            </div>
+        </div>
+        <div class="info-piece">
+            <div class="info-text">
+                <p>Find a ride whenever you want to within minutes</p>
+                <div class="discover-btn">
+                    Learn more
+                </div>
+            </div>
+            <div class="info-img-container">
+                <img src="./../images/Saly-31.png" alt="" class="info-img">
+            </div>
+        </div>
+        <div class="info-piece">
+            <div class="info-text">
+                <p>Find a ride whenever you want to within minutes</p>
+                <div class="discover-btn">
+                    Learn more
+                </div>
+            </div>
+            <div class="info-img-container">
+                <img src="./../images/Saly-3.png" alt="" class="info-img">
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="faq-img-container">
+            <img src="./../images/Saly-18.png" alt="" class="faq-img">
+        </div>
+
+        <div class="faqs-container">
+            <div class="faq">
+                <div class="question-container">
+                    <div class="question">Question 1</div>
+                    <div class="icons">
+                        <i class="uil uil-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="answer">Answer 1</div>
+            </div>
+
+            <div class="faq">
+                <div class="question-container">
+                    <div class="question">Question 2</div>
+                    <div class="icons">
+                        <i class="uil uil-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="answer">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel reiciendis quisquam, numquam impedit minima saepe voluptas dolorem ipsa eum repellat?</div>
+            </div>
+
+            <div class="faq">
+                <div class="question-container">
+                    <div class="question">Question 3</div>
+                    <div class="icons">
+                        <i class="uil uil-angle-down"></i>
+                    </div>
+                </div>
+
+                <div class="answer">Answer 3</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const faqs = document.querySelectorAll('.faqs-container .faq');
+
+        faqs.forEach(function(faq) {
+            faq.addEventListener('click', function() {
+                const isActive = faq.classList.contains('active');
+
+                // Remove 'active' class from all FAQs
+                faqs.forEach(function(item) {
+                    item.classList.remove('active');
+                });
+
+                // Add 'active' class to the clicked FAQ if it wasn't already active
+                if (!isActive) {
+                    faq.classList.add('active');
+                }
+            });
+        });
+    });
+
+    </script>
+
+    <script>
+      window.onload = initialize;
+
+      function initialize() {
+          var fromInput = document.getElementById('from-location');
+          var fromAutocomplete = new google.maps.places.Autocomplete(fromInput);
+          var toInput = document.getElementById('to-location');
+          var toAutocomplete = new google.maps.places.Autocomplete(toInput);
+      }
+  </script>
+    
+</body>
+</html>
