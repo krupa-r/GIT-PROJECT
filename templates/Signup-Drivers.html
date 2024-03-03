@@ -11,13 +11,15 @@
         <section class="login">
 
             <div class="nav-in">
-                <a href="./index.html" class="back-arrow"><i class="uil uil-arrow-left"></i></a>
+                <div class="in-link-container">
+                    <a href="./index.html" class="back-arrow"><i class="uil uil-arrow-left"></i></a>
+                    <a href="./login.html">Login</a>
+                </div>
                 <a href="./index.html" class="brand-name">LOLI</a>
-                <a href="./Login-Drivers.html">Login</a>
             </div>
 
-            <div class="login-container">
-                <div class="in-title">DRIVERS SIGN UP</div>
+            <div class="signup-d-container">
+                <div class="in-title">SIGN UP - DRIVERS</div>
                 <form id="loginForm">
                     <div class="inputs">
                         <div class="input-field">
@@ -41,7 +43,8 @@
                         <div class="input-field">
                             <input type="password" id="password" name="password" placeholder="Re-enter Password" min="6" required>
                         </div>
-                        <div class="input-field">
+                        <div class="input-field w-label">
+                            <label class="label" for="myFile">ID verification:</label><br>
                             <input type="file" id="myFile" name="myFile">
                         </div>
                     </div>
