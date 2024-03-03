@@ -1,25 +1,61 @@
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Page</title>
-    <link rel="stylesheet" href="./../styles/style.css">
-</head>    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../styles/style.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <title>Sign Up</title>
+    </head> 
     <body>
-       
-        <div class="signup-container">
-            <h2>Sign Up</h2>
-        <form class="signup-form" action ="/signup" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="text" name="full name" placeholder="Full Name" required>
-            <input type="text" name="email" placeholder="Email" required>
-            <input type="tel" name="phone" placeholder="Phone" required>
-            <input type="text" name="license plate number" placeholder="License Plate Number" required>
-            <input type="file" name="image" accept="image" required>
-            <input type="text" name="vehicle info" placeholder="Vehicle Info" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Sign Up</button>
-        </form>
-        </div>
+        
+        <section class="login">
+
+            <div class="nav-in">
+                <a href="./index.html" class="back-arrow"><i class="uil uil-arrow-left"></i></a>
+                <a href="./index.html" class="brand-name">LOLI</a>
+                <a href="./Login-Drivers.html">Login</a>
+            </div>
+
+            <div class="login-container">
+                <div class="in-title">DRIVERS SIGN UP</div>
+                <form id="loginForm">
+                    <div class="inputs">
+                        <div class="input-field">
+                            <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="phone_number" name="phone_number" placeholder="Phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="password" name="password" placeholder="Enter Password" min="6" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="car company" placeholder="Car Company" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="car model" placeholder="Car Model" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" name="license plate number" placeholder="License Plate Number" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="password" name="password" placeholder="Re-enter Password" min="6" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="file" id="myFile" name="myFile">
+                        </div>
+                    </div>
+                    <div class="submit-input-field input-field">
+                        <button type="submit" class="btn">Submit</button>
+                    </div>
+                    <div class="external-logins">
+                        <i class="uil uil-google"></i>
+                        <i class="uil uil-facebook"></i>
+                        <i class="uil uil-apple"></i>
+                    </div>
+                </form>
+            </div>
+
+        </section>
     </body>
 </html>
