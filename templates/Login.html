@@ -1,18 +1,43 @@
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="./../styles/style.css">
-</head>    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./../styles/style.css">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+        <title>Log in</title>
+    </head> 
     <body>
-        <div class ="login-container">
-            <h2>Login</h2>
-            <form class="login-form" action="/login" method="post">
-                <input type="text" name="username" placeholder="Username" required>
-                <input type="password" name="password" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
-        </div>
+        
+        <section class="login">
+
+            <div class="nav-in">
+                <a href="./index.html" class="back-arrow"><i class="uil uil-arrow-left"></i></a>
+                <a href="./index.html" class="brand-name">LOLI</a>
+                <a href="./signup.html">Sign Up</a>
+            </div>
+
+            <div class="login-container">
+                <div class="in-title">LOGIN</div>
+                <form id="loginForm">
+                    <div class="inputs">
+                        <div class="input-field">
+                            <input type="email" id="email" name="email" placeholder="Email" autocomplete="email" required>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="password" name="password" placeholder="Password" required>
+                        </div>
+                    </div>
+                    <div class="submit-input-field input-field">
+                        <button type="submit" class="btn">Login</button>
+                    </div>
+                    <div class="external-logins">
+                        <i class="uil uil-google"></i>
+                        <i class="uil uil-facebook"></i>
+                        <i class="uil uil-apple"></i>
+                    </div>
+                </form>
+            </div>
+
+        </section>
     </body>
 </html>
