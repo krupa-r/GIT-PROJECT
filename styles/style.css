@@ -2,7 +2,7 @@ body{
     font-family: Arial, sans-serif;
     text-align: left;
     margin: 50px;
-    background-color:#4357ad; /* Set background color to purple */
+    background-color:#ffd97d; /* Set background color to purple */
     color:  #ff40e6;
 }
 .login-container{
@@ -40,7 +40,7 @@ body{
 
 .signup-container{
     margin: auto;
-    background-color: #ffd97d; /* yellow background color */
+    background-color: #4357ad; /* yellow background color */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
